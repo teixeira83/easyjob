@@ -16,8 +16,16 @@
 </head>
 <body>
 
+      
 <nav class="navbar navbar-default" role="navigation">
-      <div class="container-fluid">
+
+		<div id="nav-buttons">
+			<a href="/planos-cursos-online" class="register-button">Matricule-se</a> <a
+				th:href='@{/login}' class="enter-button">Entrar</a>
+		</div>
+
+
+		<div class="container-fluid">
         <div class="navbar-header">
           <a th:href='@{/}'> <img th:src="@{/images/logo01.png}"
 					width="100" height="28" id="logo"></img>
@@ -34,14 +42,19 @@
           </form>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a th:href='@{/}'>Home</a></li>
-					<li><a th:href='@{/}'>Sobre Nós</a></li>
+					<li><a th:href='@{/aboutus}'>Sobre Nós</a></li>
 					<li><a th:href='@{/}'>Cursos</a></li>
 					<li><a th:href='@{/}'>Planos</a></li>
 					<li><a th:href='@{/}'>Contato</a></li>
 				</ul>
 			</div>
       </div>
+      
+      
+      
+      
     </nav>
+
 
 	<section layout:fragment="layoutpage"></section>
 
