@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="LayoutPage">
+
+<section layout:fragment="layoutpage" >
+<link rel="stylesheet" type="text/css" href="/css/Login.css" />
+
+<title>Register</title>
+<body style="background-color: #2a7ae4">
+<div class="login-container">
+    <h1>Registrar na EasyJob</h1>
+    <form>
+    	<section class="login-section">
+    		<a class="glyphicon glyphicon-user"></a>
+        	<input name="nome" type="text" placeholder="Digite seu nome" value="" class="login-input"></input>
+        </section>
+        <section class="login-section">
+        	<a class="glyphicon glyphicon-send"></a>
+        	<input name="email" type="text" placeholder="Digite seu e-mail" value="" class="login-input"></input>
+        </section>
+        <section class="login-section">
+        	<a class="glyphicon glyphicon-send"></a>
+        	<input name="email" type="text" placeholder="Confirme seu e-mail" value="" class="login-input"></input>
+        </section>
+        <section class="login-section">
+         	<a class="glyphicon glyphicon-lock"></a>
+        	<input name="password" type="password" placeholder="Digite sua senha" value="" class="login-input"></input>
+        </section>
+         <section class="login-section">
+         	<a class="glyphicon glyphicon-lock"></a>
+        	<input name="password" type="password" placeholder="Confirme sua senha" value="" class="login-input"></input>
+        </section>
+        <button type="submit" color="default" class="login-btn"> Entrar</button>
+    </form>
+    <footer><a href="/forgot">Esqueci a senha</a></footer>
+</div>
+</body>
+</section>
+</html>
