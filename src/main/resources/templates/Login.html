@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-	  xmlns:th="http://www.thymeleaf.org">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width" />
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="LayoutPage">
+
+<section layout:fragment="layoutpage" >
+<link rel="stylesheet" type="text/css" href="/css/Login.css" />
+
 <title>Login</title>
-<link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"
-rel="stylesheet"/>
-<link th:href="@{/webjars/bootstrap/css/bootstrap-theme.min.css}"
-rel="stylesheet"/>
-</head>
-<body>
-<div class="panel panel-default" style="margin: 10px">
-	<div class="panel-heading">
-		<h1 class="panel-title">Login Page</h1>
-	</div>
+<body style="background-color: #2a7ae4">
+<div class="login-container">
+    <h1>Acessar EasyJob</h1>
+    <form>
+        <section class="login-section">
+        	<input name="email" type="text" placeholder="Digite seu e-mail" value="" class="login-input"></input>
+        </section>
+        <section class="login-section">
+        	<input name="password" type="password" placeholder="Sua senha" value="" class="login-input"></input>
+        </section>
+        <button type="submit" color="default" class="login-btn"> Entrar</button>
+    </form>
+    <footer><a href="/forgot">Esqueci a senha</a></footer>
 </div>
 </body>
+</section>
 </html>
