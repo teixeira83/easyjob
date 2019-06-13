@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Aluno {
+public class Student {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,11 +15,11 @@ public class Aluno {
 	public Long getId() {
 		return id;
 	}
-	public String getNome() {
-		return nome;
+	public String getname() {
+		return name;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setname(String name) {
+		this.name = name;
 	}
 	public String getEmail() {
 		return email;
@@ -27,15 +27,15 @@ public class Aluno {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getSenha() {
-		return senha;
+	public String getpassword() {
+		return password;
 	}
-	public void setSenha(String senha) {
-		this.senha = senha;
+	public void setpassword(String password) {
+		this.password = password;
 	}
-	private String nome;
+	private String name;
 	private String email;
-	private String senha;
+	private String password;
 	
 	
 }
