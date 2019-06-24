@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="LayoutPage">
+
+<section layout:fragment="layoutpage" >
+<link rel="stylesheet" type="text/css" href="/css/Login.css" />
+
+<title>Register</title>
+<body style="background-color: #2a7ae4">
+<th:block th:include="MensagemValidacao"></th:block>
+<div class="login-container">
+    <h1>Registrar na EasyJob</h1>
+    <form method="POST" th:action="@{/register}" th:object="${student}">
+    	<section class="login-section">
+    		<a class="glyphicon glyphicon-user"></a>
+        	<input name="nome" type="text" placeholder="Digite seu nome" th:field="*{name}" class="login-input" required="required"></input>
+        </section>
+        <section class="login-section">
+        	<a class="glyphicon glyphicon-send"></a>
+        	<input name="email" type="text" placeholder="Digite seu e-mail" th:field="*{email}" class="login-input" required="required"></input>
+        </section>
+        <section class="login-section">
+        	<a class="glyphicon glyphicon-send"></a>
+        	<input name="email_verify" type="text" placeholder="Confirme seu e-mail" th:field="*{emailCheck}" class="login-input" required="required"></input>
+        </section>
+        <section class="login-section">
+         	<a class="glyphicon glyphicon-lock"></a>
+        	<input name="password" type="password" placeholder="Digite sua senha" th:field="*{password}" class="login-input" required="required"></input>
+        </section>
+         <section class="login-section">
+         	<a class="glyphicon glyphicon-lock"></a>
+        	<input name="password_verify" type="password" placeholder="Confirme sua senha" th:field="*{passwordCheck}" class="login-input" required="required"></input>
+        </section>
+        <button type="submit" color="default" class="login-btn"> Entrar</button>
+    </form>
+    <footer><a href="/forgot">Esqueci a senha</a></footer>
+</div>
+</body>
+</section>
+</html>

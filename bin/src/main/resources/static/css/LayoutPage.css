@@ -1,0 +1,66 @@
+#logo {
+   margin-top: 10px;
+}
+
+#logo-radius {
+	width: 250px;
+	height: 250px;
+}
+
+#nav-buttons {
+	display: flex;
+	padding: 5px 30px 0px;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    float: right;
+    display: flex;
+	justify-content: center; /* align horizontal */
+	align-items: center;
+    
+}
+
+.enter-button{
+	
+    display: block;
+    margin-left: 4px;
+    padding: 13px 7px;
+    border-radius: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #2a7ae4;
+    color: #FFF;
+    box-shadow: 0 4px 10px 0 rgba(23,23,23,.1);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    min-width: 110px;
+    position: relative;
+    text-decoration: none;
+}
+
+.register-button{
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #2a7ae4;
+	padding: 7px 15px 7px;
+	border: 2px dashed #f69c55;
+	
+
+}
+
+.text-title{
+	font-size: 41px;
+	font-weight: 800;
+    line-height: 1.38;
+    letter-spacing: -.3px;
+    color: #fff;
+}
+
+.text-subtitle{
+	font-size: 23px;
+	line-height: 1.44;
+    color: #fff;
+    margin-top: 10px;
+}

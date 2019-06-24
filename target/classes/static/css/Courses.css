@@ -1,0 +1,23 @@
+.courses-styles{
+	
+	margin-bottom: 3em;
+    border: 1px solid #e1e1e1;
+    background: #fff;
+    font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    border-radius: 3px;
+    background: #fff;
+    margin: 0 auto;
+    padding: 0 30px;
+    direction: ltr;
+    display: block;
+    letter-spacing: 0;
+	line-height: 1.5;
+	float: left;
+}
+
+.big-container{
+	position: relative;
+    z-index: 100;
+    padding: 4em 0 8.5em 0;
+}

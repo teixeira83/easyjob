@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="LayoutPage">
+
+<section layout:fragment="layoutpage" >
+<title>Sobre Nós</title>
+<link rel="stylesheet" type="text/css" href="/css/About.css" />
+	<h1 class="container-title"><div class="container">Sobre a Easy Job</div></h1>
+	
+	<div class="container-content">
+		<span class="content-text">
+			<p>A Easy Job é uma empresa que quer se tornar referência quando se pensa em aprendizagem. Nosso foco é compartilhar tanto conhecimento quanto pudermos. Temos enraizados em nossa cultura que o conhecimento é a chave do desenvolvimento e queremos ajudá-los a alcançar essa evolução. Queremos participar do seu crescimento pessoal e profissional. Tudo em prol de um mundo melhor. Juntos somos mais fortes.</p>
+			<p>Com a ajuda da nossa comunidade iremos disponibilizar os treinamentos das tecnologias mais atuais e utilizadas no mercado de trabalho.</p>
+			<p>Todo curso que fica disponível na plataforma passou por uma minuciosa verificação de seu conteúdo realizada pelos professores que atual na Easy Job. Portanto, podem confiar no potêncial de cada curso que encontrar aqui.</p>  
+		</span>
+		<img th:src="@{/images/classroom.jpg}" class="content-photo"></img>
+	</div>
+</section>
+</html>

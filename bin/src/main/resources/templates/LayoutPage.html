@@ -19,11 +19,12 @@
       
 <nav class="navbar navbar-default" role="navigation">
 
-		<div id="nav-buttons" th:if="${#strings.isEmpty(mensagem)}">
+		<div id="nav-buttons">
 			<a th:href='@{/register}' class="register-button">Matricule-se</a> <a
-				th:href='@{/login}' class="enter-button">ENTRAR</a>
+				th:href='@{/login}' class="enter-button">Entrar</a>
 		</div>
-	
+
+
 		<div class="container-fluid">
         <div class="navbar-header">
           <a th:href='@{/}'> <img th:src="@{/images/logo01.png}"
@@ -42,7 +43,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li><a th:href='@{/}'>Home</a></li>
 					<li><a th:href='@{/aboutus}'>Sobre Nós</a></li>
-					<li><a th:href='@{/courses}'>Cursos</a></li>
+					<li><a th:href='@{/}'>Cursos</a></li>
 				</ul>
 			</div>
       </div>

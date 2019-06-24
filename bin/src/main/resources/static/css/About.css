@@ -1,0 +1,42 @@
+.container-title {
+	font-size: 60px;
+    font-weight: 900;
+    letter-spacing: -1.3px;
+    background-color: #2a7ae4;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: -.6px;
+    line-height: 1.2;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    text-align: left;
+}
+
+.container {
+	padding-right: 0;
+    padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+}
+
+.container-content {
+	font-size: 1.525em;
+	padding-bottom: 100px;
+    padding-top: 50px;
+}
+
+.content-text {
+	display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    margin-left: 8em;
+}
+
+.content-photo{
+	
+    display: inline-block;
+    width: 40%;
+}
+
