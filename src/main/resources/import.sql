@@ -8,7 +8,7 @@ insert into student (email, email_check, name, password, password_check)values (
 
 
 insert into course( description, rating, tittle) values ( 'Curso de java', 5, 'JAVA');
-insert into course( description, rating, tittle) values ( 'Curso de html', 5, 'HTML);
+insert into course( description, rating, tittle) values ( 'Curso de html', 5, 'HTML');
 insert into course( description, rating, tittle) values ( 'Curso de lua', 5, 'LUA');
 insert into course( description, rating, tittle) values ( 'Curso de C#', 5, 'C#');
 insert into course( description, rating, tittle) values ( 'Curso de IONIC', 5, 'IONIC');
