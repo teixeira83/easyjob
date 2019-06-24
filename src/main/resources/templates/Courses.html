@@ -7,17 +7,35 @@
 <section layout:fragment="layoutpage">
 	<link rel="stylesheet" type="text/css" href="/css/HomePage.css" />
 	<link rel="stylesheet" type="text/css" href="/css/Courses.css" />
-
+	<link rel="stylesheet" type="text/css" href="/css/LayoutPage.css" />
+	
 	<title>Courses</title>
 
 	<body style="background-color: #2a7ae4">
+ 	
+	<form class="form-inline" method="POST" th:action="@{/courses}" th:object="${course}">
+				<div class="form-group">
+					<input type="text" class="form-control"	placeholder="Título" th:field="*{tittle}"> </input>
+					<input type="text" class="form-control" placeholder="Descrição" th:field="*{description}"> </input>
+					<input type="number" class="form-control" placeholder="1-5" th:field="*{rating}" min="1" max="5"> </input>
+					<button type="submit" class="btn btn-primary">Adicionar</button>
+				</div>
+	</form>
+	
 		<div class="big-container">
  			<tbody>
 				<tr th:each="course : ${courses}">
-				<div class="courses-styles">
-					<td th:text="${course.tittle}"></td>
-					<td th:text="${course.description}"></td>
-					<td th:text="${course.imagem}"></td>
+				<div class="row">
+					<div class="small-row">
+						<div class="courses-styles">
+							<p>Curso: <td name="tittle" th:text="${course.tittle}"></td></p>
+							<p>Descrição: <td name="description" th:text="${course.description}"></td></p>
+							<p>Rating: <td name="rating" th:text="${course.rating}"></td></p>
+							<button class="register-button">
+							<a th:href="@{/courses/delete/} + ${course.tittle}" class="glyphicon glyphicon-trash">          Remover Curso</a>
+							</button>
+						</div>
+					</div>
 				</div>
 				</tr>
 			</tbody>

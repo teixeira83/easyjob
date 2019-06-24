@@ -32,7 +32,7 @@ public class RegisterController {
 		if ( (s.getEmail().equals( s.getEmailCheck() )) && (s.getpassword().equals( s.getPasswordCheck() ) ) )  {			
 			st.save(s);
 			attributes.addFlashAttribute("mensagem", "Registro realizado com sucesso");
-			return "redirect:/register";
+			return "redirect:/register";	
 		}else {
 			attributes.addFlashAttribute("mensagem", "Favor verificar os campos");
 		}

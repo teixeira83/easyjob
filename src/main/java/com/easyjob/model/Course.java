@@ -11,12 +11,17 @@ public class Course {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String tittle, description, imagem;
-	public String getImagem() {
-		return imagem;
+	public Long getId() {
+		return id;
 	}
-	public void setImagem(String imagem) {
-		this.imagem = imagem;
+	private String tittle, description;
+	private int rating;
+	
+	public int getRating() {
+		return rating;
+	}
+	public void setRating(int rating) {
+		this.rating = rating;
 	}
 	public String getTittle() {
 		return tittle;
