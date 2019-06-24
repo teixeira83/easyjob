@@ -11,16 +11,17 @@
 <body style="background-color: #2a7ae4">
 <div class="login-container">
     <h1>Acessar EasyJob</h1>
-    <form>
+    <form method="POST">
+    <!-- method="POST" th:action="@{/login}"  -->
         <section class="login-section">
         	<a class="glyphicon glyphicon-user"></a>
-        	<input name="email" type="text" placeholder="Digite seu e-mail" value="" class="login-input"></input>
+        	<input name="email" type="text" placeholder="Digite seu e-mail" value="" class="login-input" required="required"></input>
         </section>
         <section class="login-section">
         <a class="glyphicon glyphicon-lock"></a>
-        	<input name="password" type="password" placeholder="Sua senha" value="" class="login-input"></input>
+        	<input name="password" type="password" placeholder="Sua senha" value="" class="login-input" required="required"></input>
         </section>
-        <button type="submit" color="default" class="login-btn"> Entrar</button>
+        <button type="submit" color="default" class="login-btn">Entrar</button>
     </form>
     <footer><a href="/forgot">Esqueci a senha</a></footer>
 </div>

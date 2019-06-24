@@ -11,7 +11,20 @@ public class Student {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	private String name, email, password, emailCheck, passwordCheck;
 	
+	public String getEmailCheck() {
+		return emailCheck;
+	}
+	public void setEmailCheck(String emailCheck) {
+		this.emailCheck = emailCheck;
+	}
+	public String getPasswordCheck() {
+		return passwordCheck;
+	}
+	public void setPasswordCheck(String passwordCheck) {
+		this.passwordCheck = passwordCheck;
+	}
 	public Long getId() {
 		return id;
 	}
@@ -33,9 +46,7 @@ public class Student {
 	public void setpassword(String password) {
 		this.password = password;
 	}
-	private String name;
-	private String email;
-	private String password;
+	
 	
 	
 }
