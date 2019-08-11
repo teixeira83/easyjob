@@ -33,9 +33,9 @@
 
         <div class="collapse navbar-collapse">
           
-          <form class="navbar-form navbar-right">
+          <form class="navbar-form navbar-right" method="GET" th:action="@{/courses/search}">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Buscar Curso"></input>
+              <input name="courseTitle" id="courseTitle" type="text" class="form-control" placeholder="Buscar Curso"></input>
             </div>
             
 			<button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
