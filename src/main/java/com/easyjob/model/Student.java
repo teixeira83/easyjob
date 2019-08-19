@@ -16,13 +16,8 @@ public class Student {
 	@Size(min = 2, max = 50)
 	private String name;
 
-	@NotNull
-	@Size(min = 6, max = 50)
-	private String email;
-
-	@NotNull
-	@Size(min = 2, max = 18)
-	private String password;
+	@OneToOne
+	private Usuario usuario;
 
 	@ManyToMany
 	private List<Course> course;
@@ -30,25 +25,32 @@ public class Student {
 	public Long getId() {
 		return id;
 	}
-	public String getname() {
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
 		return name;
 	}
-	public void setname(String name) {
+
+	public void setName(String name) {
 		this.name = name;
 	}
-	public String getEmail() {
-		return email;
+
+	public Usuario getUsuario() {
+		return usuario;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
-	public String getpassword() {
-		return password;
+
+	public List<Course> getCourse() {
+		return course;
 	}
-	public void setpassword(String password) {
-		this.password = password;
+
+	public void setCourse(List<Course> course) {
+		this.course = course;
 	}
-	
-	
-	
 }

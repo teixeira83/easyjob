@@ -1,9 +1,6 @@
 package com.easyjob.model;
 
-import jdk.nashorn.internal.objects.annotations.Getter;
-
 import javax.persistence.*;
-import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -20,13 +17,8 @@ public class Teacher {
     @Size(min = 2, max = 20)
     private String name;
 
-    @NotNull
-    @Size(min = 6, max = 20)
-    private String email;
-
-    @NotNull
-    @Size(min = 2, max = 18)
-    private String password;
+    @OneToOne
+    private Usuario usuario;
 
     @Min(0)
     private float salary;
@@ -52,22 +44,6 @@ public class Teacher {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     public float getSalary() {
         return salary;
     }
@@ -82,5 +58,13 @@ public class Teacher {
 
     public void setCourse(List<Course> course) {
         this.course = course;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }

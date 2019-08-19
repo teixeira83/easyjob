@@ -16,12 +16,12 @@ public class Course {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@NotNull(message = "O tamanho do título deve estar entre 1 e 50")
-	@Size(min = 1, max = 50)
+	@NotNull(message = "O tamanho do título deve estar entre 1 e 10")
+	@Size(min = 1, max = 10)
 	private String tittle;
 
-	@NotNull(message = "O tamanho da descrição deve estar entre 1 e 50")
-	@Size(min = 5, max = 250)
+	@NotNull(message = "O tamanho da descrição deve estar entre 1 e 20")
+	@Size(min = 5, max = 20)
 	private String description;
 
 	@NotNull(message = "O rating deve estar entre 0 e 5")

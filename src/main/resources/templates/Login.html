@@ -12,15 +12,14 @@
 <th:block th:include="MensagemValidacao"></th:block>
 <div class="login-container">
     <h1>Acessar EasyJob</h1>
-    <form method="POST">
-    <!-- method="POST" th:action="@{/login}"  -->
+    <form method="POST" th:action="@{/login}">
         <section class="login-section">
         	<a class="glyphicon glyphicon-user"></a>
-        	<input name="email" type="text" placeholder="Digite seu e-mail" value="" class="login-input" required="required"></input>
+        	<input name="username" id="username" type="text" placeholder="Digite seu username" value="" class="login-input" required="required"></input>
         </section>
         <section class="login-section">
         <a class="glyphicon glyphicon-lock"></a>
-        	<input name="password" type="password" placeholder="Sua senha" value="" class="login-input" required="required"></input>
+        	<input name="password" id="password" type="password" placeholder="Sua senha" value="" class="login-input" required="required"></input>
         </section>
         <button type="submit" color="default" class="login-btn">Entrar</button>
     </form>
