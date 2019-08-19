@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org"
+  	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	layout:decorator="LayoutPage">
+  layout:decorator="LayoutPage">
 
 <section layout:fragment="layoutpage">
 	<link rel="stylesheet" type="text/css" href="/css/HomePage.css" />
@@ -44,9 +45,16 @@
 							<p>Curso: <td name="tittle" th:text="${course.tittle}"></td></p>
 							<p>Descrição: <td name="description" th:text="${course.description}"></td></p>
 							<p>Rating: <td name="rating" th:text="${course.rating}"></td></p>
-							<button class="register-button">
-							<a th:href="@{/courses/delete/} + ${course.id}" class="glyphicon glyphicon-trash">          Remover Curso</a>
-							</button>
+							<div sec:authorize="hasRole('ADMIN')">
+								<button class="register-button">
+								<a th:href="@{/courses/delete/} + ${course.id}" class="glyphicon glyphicon-trash">Remover Curso</a>
+								</button>
+							</div>
+							<div sec:authorize="hasRole('VIEWW')">
+								<button class="register-button">
+									<a th:href="@{/courses/delete/} + ${course.id}" class="glyphicon glyphicon-trash">Remover Curso</a>
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
