@@ -32,13 +32,5 @@ public class LoginController {
 	public String showLoginPage() {
 		return "Login";
 	}	
-	
-//	@RequestMapping(method = RequestMethod.POST)
-//	public String loginStudent(String username,
-//									   String password) {
-//
-//		System.out.println(username);
-//		System.out.println(password);
-//		return "redirect:/home";
-//	}
+
 }

@@ -45,12 +45,12 @@
 							<p>Curso: <td name="tittle" th:text="${course.tittle}"></td></p>
 							<p>Descrição: <td name="description" th:text="${course.description}"></td></p>
 							<p>Rating: <td name="rating" th:text="${course.rating}"></td></p>
-							<div sec:authorize="hasRole('ADMIN')">
+							<div sec:authorize="hasRole('ROLE_ADMIN')">
 								<button class="register-button">
 								<a th:href="@{/courses/delete/} + ${course.id}" class="glyphicon glyphicon-trash">Remover Curso</a>
 								</button>
 							</div>
-							<div sec:authorize="hasRole('VIEWW')">
+							<div sec:authorize="hasRole('ROLE_VIEWW')">
 								<button class="register-button">
 									<a th:href="@{/courses/delete/} + ${course.id}" class="glyphicon glyphicon-trash">Remover Curso</a>
 								</button>

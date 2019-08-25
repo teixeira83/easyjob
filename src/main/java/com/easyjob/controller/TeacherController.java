@@ -1,6 +1,5 @@
 package com.easyjob.controller;
 
-import com.easyjob.model.Student;
 import com.easyjob.model.Teacher;
 import com.easyjob.repository.TeacherRepository;
 import org.springframework.beans.factory.annotation.Autowired;
